@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="CreateReclamation" cloudDestinationProperty="CreateReclamation" layout="BoxLayout" boxLayoutAxis="Y" >
+  <component type="Container" name="Container" cloudDestinationProperty="Container" scrollVisible="false" layout="BoxLayout" boxLayoutAxis="Y" >
+    <component type="TextField" name="TextField" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="                                                                             Envoyer Reclamation" >
+    </component>
+    <component type="TextArea" name="TextArea" cloudBoundProperty="text" cloudDestinationProperty="TextArea" text="TextArea" >
+    </component>
+    <component type="Button" name="Button" cloudDestinationProperty="Button" text="BUTTON" verticalAlignment="2" >
+    </component>
+  </component>
+</component>

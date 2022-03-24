@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Container" name="Afficher Reclamation" cloudDestinationProperty="Afficher Reclamation" layout="BoxLayout" boxLayoutAxis="Y" >
+  <component type="Label" name="Label" cloudDestinationProperty="Label" text="Reclamation" >
+  </component>
+  <component type="TextArea" name="TextArea" cloudBoundProperty="text" cloudDestinationProperty="TextArea" text="TextAre" >
+  </component>
+  <component type="Label" name="Label1" cloudDestinationProperty="Label1" text="R&#xe9;ponses" >
+  </component>
+  <component type="TextArea" name="TextArea1" cloudBoundProperty="text" cloudDestinationProperty="TextArea1" text="TextArea" >
+  </component>
+</component>

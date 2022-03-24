@@ -4,7 +4,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/shai/dev/CodenameOne/NBPlugin/Travedia/build.xml</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ModifierReclamationForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListeReclamationForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/ReclamationReponse.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/Travedia.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/PaiementService.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListePaiementForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/PaiementHomeForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AjouterPaiementForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AfficherPaiementForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/ReclamationService.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AfficherRecForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ModifierPaiementForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AjouterPaiementFormFull.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/Paiement.java</file>
         </group>
     </open-files>
 </project-private>
