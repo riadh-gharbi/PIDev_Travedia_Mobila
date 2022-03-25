@@ -10,6 +10,8 @@ import com.Travedia.myapp.ReclamationService;
 import com.codename1.components.MultiButton;
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.components.SpanLabel;
+import com.codename1.ui.Button;
+import com.codename1.ui.Component;
 import static com.codename1.ui.Component.RIGHT;
 import com.codename1.ui.Container;
 import com.codename1.ui.Display;
@@ -61,7 +63,31 @@ public class ListePaiementForm extends BaseForm{
         }
         add(listRec);
         getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK, e -> previous.showBack());
-    
+        getToolbar().addSearchCommand(e -> 
+        {
+            String text= (String)e.getSource();
+            if(text==null || text.length()==0)
+            {
+                //Search Bar Empty
+                for(Component cmp : getContentPane())
+                {
+                    cmp.setHidden(false);
+                    cmp.setVisible(true);
+                }
+                getContentPane().animateLayout(150);
+            }else
+            {
+                text=text.toLowerCase();
+                for (Component cmp: getContentPane())
+                {
+                    Button mb = (Button)cmp;
+                    String line1 = mb.getText();
+                    boolean show = line1 != null && line1.toLowerCase().contains(text);
+                    mb.setHidden(!show);
+                    mb.setVisible(show);
+                }
+            }
+        });
     
     
     

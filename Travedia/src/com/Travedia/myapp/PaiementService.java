@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.Map;
 import com.codename1.processing.Result;
 
+;
 /**
  *
  * @author riadh
@@ -175,7 +176,10 @@ public class PaiementService {
              }
          });    
          NetworkManager.getInstance().addToQueueAndWait(con);
-         
+//         if (resultat)
+//         {
+//             SendMail();
+//         }
          return resultat;
      }
        public boolean modifierPaiement(Paiement p)
@@ -226,4 +230,46 @@ public class PaiementService {
       
       
       }
+     
+//     
+//     /**
+//	   Outgoing Mail (SMTP) Server
+//	   requires TLS or SSL: smtp.gmail.com (use authentication)
+//	   Use Authentication: Yes
+//	   Port for TLS/STARTTLS: 587
+//	 */
+//	public void SendMail() throws MessagingException {
+//		final String fromEmail = "travediacontact@gmail.com"; //requires valid gmail id
+//		final String password = "123solo456friendly"; // correct password for gmail id
+//		final String toEmail = "riadh.gharbi@esprit.tn"; // Test mail; later replaced by user mail
+//		
+//		System.out.println("TLSEmail Start");
+//		Properties props = new Properties();
+//                props.put("mail.transport.protocol","smtp"); //SMTP PROTOCOL
+//		props.put("mail.smtp.host", "smtp.gmail.com"); //SMTP Host
+//		props.put("mail.smtp.port", "587"); //TLS Port
+//		props.put("mail.smtp.auth", "true"); //enable authentication
+//		props.put("mail.smtp.starttls.enable", "true"); //enable STARTTLS
+//		
+//                //create Authenticator object to pass in Session.getInstance argument
+//		Authenticator auth = new Authenticator() {
+//			//override the getPasswordAuthentication method
+//                        @Override
+//			protected PasswordAuthentication getPasswordAuthentication() {
+//				return new PasswordAuthentication(fromEmail, password);
+//			}
+//		};
+//               
+//		Session session = Session.getInstance(props, auth);
+//		 MimeMessage message = new MimeMessage(session);
+//                 message.setFrom(new InternetAddress("Confirmation de Paiement"));
+//                 InternetAddress toMail = new InternetAddress(toEmail);
+//                 message.setRecipient(Message.RecipientType.TO, toMail);
+//                 message.setSubject("Paiement Enovyé");
+//                 message.setSentDate(new Date(System.currentTimeMillis()));
+//		          SMTPTransport st = (SMTPTransport)session.getTransport("smtps");
+//                          st.connect("smtp.gmail",465,fromEmail,password);
+//                          st.sendMessage(message, message.getAllRecipients());
+//	}
+
 }

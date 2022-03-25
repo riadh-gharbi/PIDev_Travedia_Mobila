@@ -256,7 +256,7 @@
         <val key="Form.transparency" value="255" />
         <val key="ImageOverlay.bgColor" value="14134b" />
         <val key="ImageOverlay.transparency" value="60" />
-        <font key="Label.font" type="ttf" face="0" style="1" size="16" name="native:MainBold" family="native:MainBold" sizeSettings="3" actualSize="3.0" />
+        <font key="Label.font" type="ttf" face="0" style="1" size="16" name="native:MainBold" family="native:MainBold" sizeSettings="2" actualSize="3.0" />
         <val key="Label.transparency" value="0" />
         <val key="LargeWhiteText.align" value="1" />
         <val key="LargeWhiteText.fgColor" value="ffffff" />
@@ -406,6 +406,7 @@
         <val key="TextField.align" value="4" />
         <border key="TextField.border" type="empty" />
         <val key="TextField.fgColor" value="333333" />
+        <font key="TextField.font" type="system" face="0" style="0" size="0" />
         <val key="TextField.margin" value="0.0,0.0,0.0,0.0" />
         <val key="TextField.padUnit" value="2,2,2,2" />
         <val key="TextField.padding" value="2.0,2.0,2.0,2.0" />
@@ -455,6 +456,7 @@
         <val key="Toolbar.bgType" value="8" />
         <border key="Toolbar.border" type="empty" />
         <val key="Toolbar.fgColor" value="000000" />
+        <font key="Toolbar.font" type="system" face="0" style="0" size="0" />
         <val key="Toolbar.transparency" value="0" />
         <val key="Welcome.bgImage" value="welcome-background.jpg" />
         <val key="Welcome.bgType" value="33" />
