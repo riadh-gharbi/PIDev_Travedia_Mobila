@@ -97,12 +97,20 @@ public class PaiementService {
           
             float ownerID = Float.parseFloat(result.getAsString("owner/id"));
             p.setOwnerId((int)ownerID);
+            try{
             float planningID = Float.parseFloat(result.getAsString("planning/id"));
             p.setPlanningId((int)planningID);
+            }catch(IllegalArgumentException  ex)
+            {
+            ex.printStackTrace();
+            }
             float prix = Float.parseFloat(item.get("prix").toString());
             p.setPrix(prix);
-        
-            p.setSessionID(item.get("sessionID").toString());
+            try{
+            p.setSessionID(item.get("sessionID").toString());}catch(NullPointerException ex)
+            {
+                p.setSessionID(null);
+            }
             p.setStatut(item.get("statut").toString());
             p.setType_paiement(item.get("typePaiement").toString());
             
@@ -155,10 +163,10 @@ public class PaiementService {
          con.addArgument("clientID", p.getClientId()+"");
          con.addArgument("ownerID", p.getOwnerId()+"");
          con.addArgument("dateCreation",sdf.format(p.getDate_creation()));
-         con.addArgument("datePaiement", sdf.format(p.getDate_paiement()));
+        // con.addArgument("datePaiement", sdf.format(p.getDate_paiement()));
          con.addArgument("planningID", p.getPlanningId()+"");
          con.addArgument("prix",p.getPrix()+"");
-         con.addArgument("sessionID", p.getSessionID());
+        // con.addArgument("sessionID", p.getSessionID());
          con.addArgument("statut", p.getStatut());
          con.addArgument("typePaiement", p.getType_paiement());
          

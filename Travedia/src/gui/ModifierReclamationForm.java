@@ -33,6 +33,7 @@ public class ModifierReclamationForm extends Form{
         TextField tfSujet = new TextField("","Sujet");
         TextField tfContenu= new TextField("", "Contenu");
         ComboBox<String> cbEtatRec = new ComboBox<>("En Cours", "Résolue");
+        
         Button btnValider = new Button("Modifier Reclamation");
         Reclamation r ;
         Map.Entry<Reclamation,ReclamationReponse> MapRec= Stream.of(ReclamationService.getInstance().getAllReclamation().entrySet()).filter(arg0->

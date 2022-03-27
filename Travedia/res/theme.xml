@@ -251,8 +251,6 @@
         <font key="FloatingHint.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.5" />
         <val key="FloatingHint.transparency" value="0" />
         <val key="Form.bgColor" value="ffffff" />
-        <gradient key="Form.bgGradient" color1="0" color2="0" posX="0.5" posY="0.5" radius="1.0" />
-        <val key="Form.bgType" value="0" />
         <val key="Form.transparency" value="255" />
         <val key="ImageOverlay.bgColor" value="14134b" />
         <val key="ImageOverlay.transparency" value="60" />
@@ -435,7 +433,7 @@
         <val key="TextHint.align" value="4" />
         <val key="TextHint.sel#align" value="4" />
         <val key="Title.align" value="4" />
-        <font key="Title.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
+        <font key="Title.font" type="ttf" face="0" style="1" size="16" name="native:MainBold" family="native:MainBold" sizeSettings="1" actualSize="12.5" />
         <val key="Title.textDecoration" value="0" />
         <val key="TitleCommand.fgColor" value="ffffff" />
         <font key="TitleCommand.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
@@ -452,11 +450,13 @@
         <val key="TitleCommand.sel#padding" value="2,2,2,2" />
         <val key="TitleCommand.sel#transparency" value="0" />
         <val key="TitleCommand.transparency" value="0" />
-        <gradient key="Toolbar.bgGradient" color1="16723285" color2="16723285" posX="0.5" posY="0.5" radius="1.0" />
-        <val key="Toolbar.bgType" value="8" />
-        <border key="Toolbar.border" type="empty" />
+        <val key="Toolbar.bgColor" value="000000" />
+        <gradient key="Toolbar.bgGradient" color1="16724787" color2="16724787" posX="0.5" posY="0.5" radius="1.0" />
+        <val key="Toolbar.bgType" value="6" />
+        <border key="Toolbar.border" type="image" i1="Toolbar.borderTop_1.png" i2="Toolbar.borderBottom_1.png" i3="Toolbar.borderLeft_1.png" i4="Toolbar.borderRight_1.png" i5="Toolbar.borderTopL_1.png" i6="Toolbar.borderTopR_1.png" i7="Toolbar.borderBottomL_1.png" i8="Toolbar.borderBottomR_1.png" i9="Toolbar.borderCenter_1.png" />
         <val key="Toolbar.fgColor" value="000000" />
-        <font key="Toolbar.font" type="system" face="0" style="0" size="0" />
+        <font key="Toolbar.font" type="ttf" face="0" style="1" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="2" actualSize="16.0" />
+        <val key="Toolbar.textDecoration" value="0" />
         <val key="Toolbar.transparency" value="0" />
         <val key="Welcome.bgImage" value="welcome-background.jpg" />
         <val key="Welcome.bgType" value="33" />
@@ -501,6 +501,15 @@
     <image name="TitleArea.borderTopL_2.png1" type="multi"  />
     <image name="TitleArea.borderTopR_2.png" type="multi"  />
     <image name="TitleArea.borderTopR_2.png1" type="multi"  />
+    <image name="Toolbar.borderBottom_1.png" type="multi"  />
+    <image name="Toolbar.borderBottomL_1.png" type="multi"  />
+    <image name="Toolbar.borderBottomR_1.png" type="multi"  />
+    <image name="Toolbar.borderCenter_1.png" type="multi"  />
+    <image name="Toolbar.borderLeft_1.png" type="multi"  />
+    <image name="Toolbar.borderRight_1.png" type="multi"  />
+    <image name="Toolbar.borderTop_1.png" type="multi"  />
+    <image name="Toolbar.borderTopL_1.png" type="multi"  />
+    <image name="Toolbar.borderTopR_1.png" type="multi"  />
     <image name="twitter-logo.png" type="multi"  />
     <image name="welcome-background.jpg"  />
     <image name="welcome-slide-1.png" type="multi"  />

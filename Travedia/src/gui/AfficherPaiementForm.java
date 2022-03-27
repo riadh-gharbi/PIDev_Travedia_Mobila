@@ -68,7 +68,7 @@ public class AfficherPaiementForm extends Form {
                 Button closeButton = new Button("Annuler");
                 confirmButton.addActionListener(l->{
                     PaiementService.getInstance().Delete(payID);
-                    previous.show();
+                    new PaiementHomeForm().showBack();
                             });
                 closeButton.addActionListener((ee) -> d.dispose());
                 Container buttonContainer = new Container(BoxLayout.x());

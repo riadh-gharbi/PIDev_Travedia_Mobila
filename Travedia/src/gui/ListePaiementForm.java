@@ -40,6 +40,7 @@ public class ListePaiementForm extends BaseForm{
     Form current;
     public ListePaiementForm(Form previous) {
         setTitle("List Paiement");
+        //setUIID("SingIn");
         Resources res;
         res = UIManager.initFirstTheme("/theme");
         Tabs swipe = new Tabs();
@@ -47,7 +48,7 @@ public class ListePaiementForm extends BaseForm{
         addTab(swipe, res.getImage("payment.jpg"),s1,"","","");
         swipe.setUIID("Container");
         swipe.getContentPane().setUIID("Container");
-        swipe.hideTabs();
+        
         current=this;
         SpanLabel sp = new SpanLabel();
         sp.setText(PaiementService.getInstance().getAllPaiement().toString());
@@ -74,18 +75,25 @@ public class ListePaiementForm extends BaseForm{
                     cmp.setHidden(false);
                     cmp.setVisible(true);
                 }
-                getContentPane().animateLayout(150);
+                
             }else
             {
                 text=text.toLowerCase();
-                for (Component cmp: getContentPane())
+                System.out.println(text);
+                for (Component cmp: listRec.getChildrenAsList(focusScrolling))
                 {
-                    Button mb = (Button)cmp;
-                    String line1 = mb.getText();
-                    boolean show = line1 != null && line1.toLowerCase().contains(text);
+                    if (cmp instanceof MultiButton){
+                    MultiButton mb = (MultiButton)cmp;
+                    String line1 = mb.getTextLine1();
+                    String line2 = mb.getTextLine2();
+                    boolean show = line1 != null && line1.toLowerCase().indexOf(text)>-1 
+                            || line2!=null && line2.toLowerCase().indexOf(text)>-1;
+                        System.out.println(show);
                     mb.setHidden(!show);
                     mb.setVisible(show);
+                    }
                 }
+                
             }
         });
     

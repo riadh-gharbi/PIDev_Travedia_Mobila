@@ -17,6 +17,7 @@ import com.codename1.ui.TextArea;
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.spinner.Picker;
 import entities.Paiement;
 import java.util.Date;
@@ -29,6 +30,7 @@ public class ModifierPaiementForm extends Form {
     public ModifierPaiementForm(Form previous,Paiement p)
     {
         setTitle("Modifier Paiement");
+        setLayout(BoxLayout.y());
         //Get all planning
         TextField tfPlanning = new TextField("","Planning",4,TextArea.NUMERIC);
         //Get own session

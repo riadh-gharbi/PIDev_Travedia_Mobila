@@ -5,7 +5,9 @@
  */
 package gui;
 
+import com.codename1.notifications.LocalNotification;
 import com.codename1.ui.Button;
+import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
@@ -24,7 +26,11 @@ public class PaiementHomeForm extends Form {
         add(new Label("Choisir une option"));
         Button btnAjouterPay = new Button("Ajouter Paiement");
         Button btnListPay = new Button("Liste des paiements");
-        
+         LocalNotification ln = new LocalNotification();
+            ln.setId("LnMessage");
+            ln.setAlertTitle("Welcome");
+            ln.setAlertBody("Thanks for arriving!");
+            Display.getInstance().scheduleLocalNotification(ln, System.currentTimeMillis()+1, LocalNotification.REPEAT_MINUTE);
         
     
         

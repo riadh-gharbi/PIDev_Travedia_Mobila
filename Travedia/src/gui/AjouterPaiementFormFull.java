@@ -66,10 +66,10 @@ public class AjouterPaiementFormFull extends Form {
                         p.setDate_creation(new Date(System.currentTimeMillis()));
                         p.setClientId(Integer.parseInt(tfClient.getText()));
                         p.setOwnerId(Integer.parseInt(tfOwner.getText()));
-                        p.setDate_paiement(datePaiement);
+                        //p.setDate_paiement(datePaiement);
                         p.setPlanningId(Integer.parseInt(tfPlanning.getText()));
                         p.setPrix(Float.parseFloat(prix.getText()));
-                        p.setSessionID(sessionID);
+                        //p.setSessionID(sessionID);
                         p.setStatut(paymentStatus);
                         p.setType_paiement(cb.getSelectedItem());
                         
