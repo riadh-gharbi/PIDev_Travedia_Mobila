@@ -100,6 +100,9 @@ public class ProfileForm extends BaseForm {
         role.setUIID("TextFieldBlack");
         addStringValue("Role", role);
         
+        Label description = new Label(SessionManager.getDescription());
+        description.setUIID("TextFieldBlack");
+        addStringValue("Description", description);
         
          Button Edit= new Button ("Modifier Compte");
                addStringValue("", Edit);

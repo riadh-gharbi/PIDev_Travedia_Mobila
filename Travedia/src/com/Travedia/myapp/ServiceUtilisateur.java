@@ -10,6 +10,7 @@ import com.codename1.io.ConnectionRequest;
 import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
+import com.codename1.processing.Result;
 import com.codename1.ui.ComboBox;
 import com.codename1.ui.Dialog;
 import com.codename1.ui.TextField;
@@ -134,23 +135,25 @@ public class ServiceUtilisateur {
 
 //session
                 float id = Float.parseFloat(user.get("id").toString());
-
+                
                 //ObjectMapper objectMapper = new ObjectMapper();
                 Object userProfile = user.get("profile");
                 //Map<String, Object> profile = objectMapper.convertValue(userProfile, Map.class);;
                 //float profileId = Float.parseFloat(user.get("profileId").toString());
 
                 //System.out.print(profile);
-
+                Result result = Result.fromContent(user);
                 SessionManager.setId((int) id);
                 //SessionManager.setEvaluation((int) evaluation);
-                // SessionManager.setProfileId((int) profileId);
+                float profileId= Float.parseFloat(result.getAsString("profile/id"));
+                SessionManager.setProfileId((int) profileId);
                 SessionManager.setEmail(user.get("email").toString());
                 SessionManager.setPassowrd(user.get("password").toString());
                 SessionManager.setRole(user.get("roles").toString());
                 SessionManager.setNom(user.get("nom").toString());
                 SessionManager.setPrenom(user.get("prenom").toString());
                 SessionManager.setLangue(user.get("langue").toString());
+                SessionManager.setDescription(result.getAsString("profile/description"));
 
                 if (user.size() > 0) {
                     resultat = req.getResponseCode() == 200;
@@ -170,7 +173,7 @@ public class ServiceUtilisateur {
     }*/
     public void editUser(int id, int profileId, TextField nom, TextField prenom, TextField email, TextField evaluation, TextField description, TextField image, TextField password, ComboBox role, ComboBox langue) {
 
-        String url = Statics.BASE_URL + "/user/editUserMobile?id=" + id + "profileId" + profileId + "&nom=" + nom.getText().toString() + "&prenom=" + prenom.getText().toString() + "&image=" + image.getText().toString() + "&description" + description.getText().toString() + "&email=" + email.getText().toString() + "&evaluation" + evaluation.getText() + "&password=" + password.getText().toString() + "&roles=" + role.getSelectedItem().toString() + "&langue=" + langue.getSelectedItem().toString();
+        String url = Statics.BASE_URL + "/user/editUserMobile?id=" + id + "&profileId=" + profileId + "&nom=" + nom.getText().toString() + "&prenom=" + prenom.getText().toString() + "&image=" + image.getText().toString() + "&description=" + description.getText().toString() + "&email=" + email.getText().toString() + "&evaluation=" + evaluation.getText() + "&password=" + password.getText().toString() + "&roles=" + role.getSelectedItem().toString() + "&langue=" + langue.getSelectedItem().toString();
         // String url = Statics.BASE_URL + "/user/editUserMobile?id=" + id + "&nom=" + nom + "&prenom=" + prenom + "&password=" + password + "&email=" + email+ "&roles=" + role+ "&langue=" + langue;
         req.setUrl(url);
         req.addResponseListener((e) -> {

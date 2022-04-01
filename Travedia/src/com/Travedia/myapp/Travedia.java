@@ -13,8 +13,11 @@ import com.codename1.ui.Toolbar;
 import java.io.IOException;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.io.NetworkEvent;
+import gui.Login;
 import gui.PaiementHomeForm;
+import gui.ProfileForm;
 import gui.ReclamationHomeForm;
+import gui.SessionManager;
 import gui.SignUpForm;
 
 /**
@@ -62,7 +65,16 @@ public class Travedia {
         //payHomeForm.show();
         //new ListRegionForm(theme).show();
         //new Login(theme).show();
-        new SignUpForm(theme).show();
+         if(SessionManager.getNom()==null) {
+            
+       
+        //awel interface besh tethaal
+        new Login(theme).show(); //nhotou signup besh tji awel form
+        //new SignInForm(theme).show();
+         }
+        else {
+            new ProfileForm(theme).show();
+        }
         //new AjoutCategorie(theme).show();
         //System.out.println(ReclamationController.getInstance().getAllReclamation().get(0).getContenu());
         //Reclamation r = ReclamationController.getInstance().getAllReclamation().get(1);

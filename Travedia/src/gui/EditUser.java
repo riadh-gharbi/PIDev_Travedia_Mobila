@@ -87,6 +87,7 @@ public class EditUser extends BaseForm {
         Label lastNameIcon = new Label("", "TextField");
         Label emailIcon = new Label("", "TextField");
         Label passwordIcon = new Label("", "TextField");
+        Label descriptionIcon = new Label("", "TextField");
 
         firstNameIcon.getAllStyles().setMargin(RIGHT, 0);
         lastNameIcon.getAllStyles().setMargin(RIGHT, 0);
@@ -128,6 +129,8 @@ public class EditUser extends BaseForm {
                         add(BorderLayout.WEST, lastNameIcon),
                 BorderLayout.center(email).
                         add(BorderLayout.WEST, emailIcon),
+                BorderLayout.center(description).
+                        add(BorderLayout.WEST, descriptionIcon),
                 BorderLayout.center(password).
                         add(BorderLayout.WEST, passwordIcon),
                 BorderLayout.center(roles),
