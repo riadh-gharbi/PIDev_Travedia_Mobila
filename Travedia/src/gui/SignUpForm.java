@@ -100,7 +100,7 @@ public class SignUpForm extends BaseForm {
             ServiceUtilisateur.getInstance().signup(nom, prenom, email, password, roles, langue);
 
             Dialog.show("Success", "Bienvenue", "OK", null);
-            new ProfileForm(theme).show();
+            new Login(theme).show();
             refreshTheme();
 
         });

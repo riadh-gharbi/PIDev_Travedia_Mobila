@@ -20,6 +20,7 @@
 package gui;
 
 import com.codename1.components.ScaleImageLabel;
+import com.codename1.io.Storage;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Display;
@@ -91,13 +92,25 @@ public class BaseForm extends Form {
 //        topBar.add(BorderLayout.SOUTH, new Label("Cool App Tagline...", "SidemenuTagline")); 
 //        topBar.setUIID("SideCommand");
 //        tb.addComponentToSideMenu(topBar);
+        getToolbar().addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_SETTINGS, e -> new ProfileForm(res).show());
+        
         getToolbar().addMaterialCommandToSideMenu("Reclamation", FontImage.MATERIAL_REQUEST_PAGE, e->{new ReclamationHomeForm().show();});
         getToolbar().addMaterialCommandToSideMenu("Paiements", FontImage.MATERIAL_PAYMENTS, e->{new PaiementHomeForm().show();});
         getToolbar().addMaterialCommandToSideMenu("Destinations", FontImage.MATERIAL_EVENT, e->{new ListDestinationForm(res).show();});
         getToolbar().addMaterialCommandToSideMenu("Resgions", FontImage.MATERIAL_EVENT, e->{new ListRegionForm(res).show();});
         getToolbar().addMaterialCommandToSideMenu("Evenements",FontImage.MATERIAL_EVENT, e->{new ListEvenementForm(res).show();});
         getToolbar().addMaterialCommandToSideMenu("Categories Evenement",FontImage.MATERIAL_EVENT_SEAT, e->{new ListCategorieForm(res).show();});
-
+        getToolbar().addMaterialCommandToSideMenu("Plannings",FontImage.MATERIAL_EVENT_SEAT, e->{new PlanningHomeForm().show();});
+        getToolbar().addMaterialCommandToSideMenu("Hotels",FontImage.MATERIAL_EVENT_SEAT, e->{new HotelHomeForm().show();});
+        getToolbar().addMaterialCommandToSideMenu("Deconnexion", FontImage.MATERIAL_EXIT_TO_APP, e -> {
+            
+           new Login(res).show(); 
+           SessionManager.pref.clearAll();
+            Storage.getInstance().clearStorage();
+             Storage.getInstance().clearCache();
+             
+             System.out.println(SessionManager.getNom());
+        });
     }
 
     
