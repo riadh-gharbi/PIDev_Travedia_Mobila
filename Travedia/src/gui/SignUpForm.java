@@ -22,6 +22,7 @@ import com.codename1.ui.util.Resources;
 import java.util.Vector;
 import com.codename1.ui.Toolbar;
 import com.Travedia.myapp.ServiceUtilisateur;
+import com.google.gson.JsonArray;
 
 //import Services.ServiceUtilisateur;
 /**
@@ -58,6 +59,10 @@ public class SignUpForm extends BaseForm {
 
         vectorRole.add("Guide");
         vectorRole.add("Voyageur");
+        JsonArray arrayG = new JsonArray();
+        arrayG.add("ROLE_GUIDE");
+        JsonArray arrayV = new JsonArray();
+        arrayV.add("ROLE_VOYAGEUR");
 
         ComboBox<String> roles;
         roles = new ComboBox<>(vectorRole);
@@ -97,7 +102,7 @@ public class SignUpForm extends BaseForm {
         createAccount.setUIID("LoginButton");
         createAccount.addActionListener((l) -> {
             //nom.getText().toString(), prenom.getText().toString(), email.getText().toString(), password.getText().toString(), roles.getSelectedItem().toString(), langue.getSelectedItem().toString()
-            ServiceUtilisateur.getInstance().signup(nom, prenom, email, password, roles, langue);
+            ServiceUtilisateur.getInstance().signup(nom, prenom, email, password, roles.getSelectedItem()=="Guide"?arrayG.toString():arrayV.toString(), langue);
 
             Dialog.show("Success", "Bienvenue", "OK", null);
             new Login(theme).show();

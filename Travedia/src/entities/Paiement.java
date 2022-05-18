@@ -22,8 +22,25 @@ public class Paiement {
     private Date date_paiement;
     private String type_paiement;
     private String sessionID;
+    private String clientName;
+    private String ownerName;
 
-    
+    public String getClientName() {
+        return clientName;
+    }
+
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
+    }
+
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+    }
+      
     
     public Paiement()
     {
@@ -40,7 +57,7 @@ public class Paiement {
     
     
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

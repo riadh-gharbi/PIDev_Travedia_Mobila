@@ -90,26 +90,26 @@ public class PlanningService {
             pla.setId((int)id);
             System.out.println(id);
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            String dateDepart = item.get("dateDepart").toString().substring(0, 10);
+            String dateDepart = result.getAsString("dateDepart/date").substring(0, 10);
             try {
                 pla.setDateDepart(sdf.parse(dateDepart));
             } catch (ParseException ex) {
                 System.out.println(ex.getMessage());
             }
-            String dateFin = item.get("dateFin").toString().substring(0, 10);
+            String dateFin = result.getAsString("dateFin/date").substring(0, 10);
             try {
                 pla.setDateFin(sdf.parse(dateFin));
             } catch (ParseException ex) {
                 System.out.println(ex.getMessage());
             }
             float prix= Float.parseFloat(item.get("prix").toString());
-            pla.setId((int)prix);
+            pla.setPrix((int)prix);
             pla.setTypePlan(item.get("typePlan").toString());
             pla.setDescription(item.get("description").toString());  
-            float voyageurId = Float.parseFloat(result.getAsString("utilisateur/id"));
+            float voyageurId = Float.parseFloat(result.getAsString("voyageurId/id"));
             pla.setVoyageurId((int)voyageurId);           
-            float EvenementId = Float.parseFloat(result.getAsString("evenements/id"));
-            pla.setEvenementId((int)EvenementId);
+            //float EvenementId = Float.parseFloat(result.getAsString("evenements/id"));
+            //pla.setEvenementId((int)EvenementId);
             //float DestinationId = Float.parseFloat(result.getAsString("destinations/id"));
             //pla.setEvenementId((int)DestinationId);
            // float HotelId = Float.parseFloat(result.getAsString("hotels/id"));
@@ -120,10 +120,10 @@ public class PlanningService {
             Plannings.add(pla);
         }
         }
-        catch(IOException | NumberFormatException ex)
+        catch(IOException | NumberFormatException  | NullPointerException ex)
         {
             
-            System.out.println(ex.getMessage());
+            System.out.println(ex.getMessage()+" " + ex.getCause());
         }
         return Plannings;
     
@@ -142,7 +142,7 @@ public class PlanningService {
                     Plannings = parse(new String(req.getResponseData(),"utf-8"));
                     req.removeResponseListener(this);
                 }catch (Exception ex){
-                
+                    System.err.println(ex.getMessage());
                 }
             }
         

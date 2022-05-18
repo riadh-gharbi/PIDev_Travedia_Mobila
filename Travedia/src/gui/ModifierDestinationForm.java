@@ -53,8 +53,8 @@ public class ModifierDestinationForm extends BaseForm {
         //*******
         Toolbar tb = new Toolbar (true);
         current = this ;
-        setToolbar(tb);
-        getTitleArea().setUIID("Container");
+        //setToolbar(tb);
+        //getTitleArea().setUIID("Container");
         setTitle("Modiifier destination");
         getContentPane().setScrollVisible(false);
                 Tabs swipe = new Tabs();
@@ -132,14 +132,14 @@ public class ModifierDestinationForm extends BaseForm {
         
         all.setSelected(true);
         arrow.setVisible(false);
-        addShowListener(e -> {
-            arrow.setVisible(true);
-            updateArrowPosition(all, arrow);
-        });
-        bindButtonSelection(all, arrow);
-        bindButtonSelection(featured, arrow);
-        bindButtonSelection(popular, arrow);
-        bindButtonSelection(myFavorite, arrow);
+//        addShowListener(e -> {
+//            arrow.setVisible(true);
+//            updateArrowPosition(all, arrow);
+//        });
+//        bindButtonSelection(all, arrow);
+//        bindButtonSelection(featured, arrow);
+//        bindButtonSelection(popular, arrow);
+//        bindButtonSelection(myFavorite, arrow);
         
 //****************
         TextField nom = new TextField(ev.getNom(),"nom",20,TextField.ANY);
@@ -186,18 +186,18 @@ public class ModifierDestinationForm extends BaseForm {
     
     
     
-      private void updateArrowPosition(Button btn, Label l) {
-        l.getUnselectedStyle().setMargin(LEFT,btn.getX()+btn.getWidth()/2-l.getWidth()/2);
-        l.getParent().repaint();
-    }
+//      private void updateArrowPosition(Button btn, Label l) {
+//        l.getUnselectedStyle().setMargin(LEFT,btn.getX()+btn.getWidth()/2-l.getWidth()/2);
+//        l.getParent().repaint();
+//    }
 
-    private void bindButtonSelection(Button btn, Label l) {
-        btn.addActionListener(e->{
-            if (btn.isSelected()){
-                updateArrowPosition(btn,l);}
-            }
-        );
-    }
+//    private void bindButtonSelection(Button btn, Label l) {
+//        btn.addActionListener(e->{
+//            if (btn.isSelected()){
+//                updateArrowPosition(btn,l);}
+//            }
+//        );
+//    }
 
      private void addTab(Tabs swipe, Image img, Label spacer, String likesStr, String commentsStr, String text) {
         int size = Math.min(Display.getInstance().getDisplayWidth(), Display.getInstance().getDisplayHeight());

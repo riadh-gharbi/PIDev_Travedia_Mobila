@@ -54,7 +54,7 @@ public class BaseForm extends Form {
     }
 
     public BaseForm(String title, Layout contentPaneLayout) {
-        super(title, contentPaneLayout);
+        //super(title, contentPaneLayout);
     }
     
     
@@ -74,6 +74,7 @@ public class BaseForm extends Form {
 
     protected void addSideMenu(Resources res) {
         Toolbar tb = getToolbar();
+        tb.setUIID("Toolbar");
         Image img = res.getImage("profile-background.jpg");
         if(img.getHeight() > Display.getInstance().getDisplayHeight() / 3) {
             img = img.scaledHeight(Display.getInstance().getDisplayHeight() / 3);
@@ -97,7 +98,7 @@ public class BaseForm extends Form {
         getToolbar().addMaterialCommandToSideMenu("Reclamation", FontImage.MATERIAL_REQUEST_PAGE, e->{new ReclamationHomeForm().show();});
         getToolbar().addMaterialCommandToSideMenu("Paiements", FontImage.MATERIAL_PAYMENTS, e->{new PaiementHomeForm().show();});
         getToolbar().addMaterialCommandToSideMenu("Destinations", FontImage.MATERIAL_EVENT, e->{new ListDestinationForm(res).show();});
-        getToolbar().addMaterialCommandToSideMenu("Resgions", FontImage.MATERIAL_EVENT, e->{new ListRegionForm(res).show();});
+        getToolbar().addMaterialCommandToSideMenu("Regions", FontImage.MATERIAL_EVENT, e->{new ListRegionForm(res).show();});
         getToolbar().addMaterialCommandToSideMenu("Evenements",FontImage.MATERIAL_EVENT, e->{new ListEvenementForm(res).show();});
         getToolbar().addMaterialCommandToSideMenu("Categories Evenement",FontImage.MATERIAL_EVENT_SEAT, e->{new ListCategorieForm(res).show();});
         getToolbar().addMaterialCommandToSideMenu("Plannings",FontImage.MATERIAL_EVENT_SEAT, e->{new PlanningHomeForm().show();});

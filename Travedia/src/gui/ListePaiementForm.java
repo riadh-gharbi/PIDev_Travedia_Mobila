@@ -9,7 +9,9 @@ import com.Travedia.myapp.PaiementService;
 import com.Travedia.myapp.ReclamationService;
 import com.codename1.components.MultiButton;
 import com.codename1.components.ScaleImageLabel;
+import com.codename1.components.SpanButton;
 import com.codename1.components.SpanLabel;
+import com.codename1.components.SpanMultiButton;
 import com.codename1.ui.Button;
 import com.codename1.ui.ButtonGroup;
 import com.codename1.ui.Component;
@@ -96,9 +98,9 @@ public class ListePaiementForm extends BaseForm{
         
         for (Paiement p : PaiementService.getInstance().getAllPaiement())
         {
-            MultiButton mb = new MultiButton("Client "+p.getClientId() + "Guide "+ p.getOwnerId());
+            SpanMultiButton mb = new SpanMultiButton(p.getOwnerName() + " - " +p.getClientName());
             mb.setTextLine2(p.getPrix()+" ");
-            mb.addActionListener(e -> new AfficherPaiementForm(current,p.getId()).show());
+            mb.addActionListener(e -> new AfficherPaiementForm(current,(int)p.getId()).show());
             listRec.add(mb);
         }
         add(listRec);

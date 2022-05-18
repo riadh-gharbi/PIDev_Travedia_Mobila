@@ -79,26 +79,38 @@ public class PaiementService {
             p.setId((int)id);
             //System.out.println(item.get("client").toString());
             float clientID= Float.parseFloat(result.getAsString("client/id"));
+            String clientName = result.getAsString("client/nom") + " " + result.getAsString("client/prenom");
+            String ownerName = result.getAsString("owner/nom") + " " + result.getAsString("owner/prenom");
+            p.setClientName(clientName);
+            p.setOwnerName(ownerName);
             //System.out.println("ID DU CLIENT" + clientID);
             p.setClientId((int)clientID);
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            String dateCreation = item.get("dateCreation").toString().substring(0, 10);
+            String dateCreation = result.getAsString("dateCreation/date").substring(0, 10);
+            //System.out.println(dateCreation);
             p.setDate_creation(sdf.parse(dateCreation));
             
           
                  //System.out.println(p.getDate_creation());
+                 if ("null".equals(result.getAsString("datePaiement")))
+                 {
+                     System.out.println("parsing datepaiement null");
+                 p.setDate_paiement(null);
+                 }else{
                 try{
-                String datePaiement= item.get("datePaiement").toString().substring(0, 10);
+                
+                String datePaiement= result.getAsString("datePaiement/date").substring(0, 10);
                 p.setDate_paiement(sdf.parse(datePaiement));}
-                catch(NullPointerException ex)
+                catch(NullPointerException | ParseException ex)
                 {
                   p.setDate_paiement(null);
                 }
-          
+                 }
             float ownerID = Float.parseFloat(result.getAsString("owner/id"));
             p.setOwnerId((int)ownerID);
             try{
             float planningID = Float.parseFloat(result.getAsString("planning/id"));
+                System.out.println(planningID);
             p.setPlanningId((int)planningID);
             }catch(IllegalArgumentException  ex)
             {
@@ -117,14 +129,15 @@ public class PaiementService {
             //if (item.get("utilisateur_id")==  null  ){!
             //r.setUser_id((int)(item.get("utilistaeur_id")));}
             Paiements.add(p);
+            
         //}
         }
         }
-        catch(IOException | NumberFormatException  | NullPointerException nEx)
+        catch(IOException | NumberFormatException  | NullPointerException | ParseException nEx)
         {
             
             nEx.printStackTrace();
-            System.out.println("Exception Parse Function Paiement");
+            System.out.println("Exception Parse Function Paiement " +nEx.getMessage() + " "+ nEx.getCause());
         }
         return Paiements;
     
@@ -142,13 +155,15 @@ public class PaiementService {
                     Paiements = parse(new String(con.getResponseData(),"utf-8"));
                     con.removeResponseListener(this);
                 } catch (IOException | NullPointerException | ParseException ex) {
-                    System.out.println("Exception Get All Paiement");
+                    System.err.println("Exception Get All Paiement "+ex.getMessage());
                 }
             }
         });
             NetworkManager.getInstance().addToQueueAndWait(con);
         return Paiements;
     }
+     
+     
      
      public boolean ajouterPaiement(Paiement p)
      {

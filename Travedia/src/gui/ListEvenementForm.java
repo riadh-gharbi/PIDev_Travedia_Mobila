@@ -75,18 +75,13 @@ public class ListEvenementForm extends BaseForm{
    public ListEvenementForm(Resources res){
        //super("Newsfeed",BoxLayout.y());
         setLayout(BoxLayout.y());
-        Toolbar tb = new Toolbar (true);
+//        Toolbar tb = new Toolbar (true);
         current = this ;
-        setToolbar(tb);
-        getTitleArea().setUIID("Container");
-        setTitle("List Categories");
+//        setToolbar(tb);
+  //      getTitleArea().setUIID("Container");
+    //    setTitle("List Evenements");
         getContentPane().setScrollVisible(false);
-        
-       tb.addSearchCommand(e ->{
-           String text = (String) e.getSource();
-            search(text);
-        }, 4); 
-        
+       
         Tabs swipe = new Tabs();
         Label s1= new Label();
         Label s2= new Label();

@@ -52,14 +52,14 @@ public class AjoutEvenement extends BaseForm {
     public AjoutEvenement(Resources res){
         //super("Newsfeed",BoxLayout.y());
         setLayout(BoxLayout.y());
-        Toolbar tb = new Toolbar (true);
+        //Toolbar tb = new Toolbar (true);
         current = this ;
-        setToolbar(tb);
-        getTitleArea().setUIID("Container");
+        //setToolbar(tb);
+        //getTitleArea().setUIID("Container");
         setTitle("Ajout Evenement");
         getContentPane().setScrollVisible(false);
         
-        tb.addSearchCommand(e ->{});
+        //tb.addSearchCommand(e ->{});
         Tabs swipe = new Tabs();
         Label s1= new Label();
         Label s2= new Label();
@@ -67,8 +67,8 @@ public class AjoutEvenement extends BaseForm {
        addTab(swipe, res.getImage("ev.jpeg"), s1, "", "", "");
        ///////////////////////////////////////////////////////////////
        
-       swipe.setUIID("Container");
-        swipe.getContentPane().setUIID("Container");
+       //swipe.setUIID("Container");
+       // swipe.getContentPane().setUIID("Container");
         swipe.hideTabs();
         
         ButtonGroup bg = new ButtonGroup();

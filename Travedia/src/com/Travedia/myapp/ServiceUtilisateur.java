@@ -51,9 +51,9 @@ public class ServiceUtilisateur {
     }
 
     //SignUp
-    public boolean signup(TextField nom, TextField prenom, TextField email, TextField password, ComboBox role, ComboBox langue) {
+    public boolean signup(TextField nom, TextField prenom, TextField email, TextField password, String role, ComboBox langue) {
 
-        String url = Statics.BASE_URL + "/user/signUp?nom=" + nom.getText().toString() + "&prenom=" + prenom.getText().toString() + "&email=" + email.getText().trim() + "&password=" + password.getText().toString() + "&roles=" + role.getSelectedItem().toString() + "&langue=" + langue.getSelectedItem().toString();
+        String url = Statics.BASE_URL + "/user/signUp?nom=" + nom.getText().toString() + "&prenom=" + prenom.getText().toString() + "&email=" + email.getText().trim() + "&password=" + password.getText().toString() + "&roles=" + role + "&langue=" + langue.getSelectedItem().toString();
 
         req.setUrl(url);
 
@@ -134,7 +134,6 @@ public class ServiceUtilisateur {
                 Map<String, Object> user = j.parseJSON(new CharArrayReader(json.toCharArray()));
 
 //session
-                float id = Float.parseFloat(user.get("id").toString());
                 
                 //ObjectMapper objectMapper = new ObjectMapper();
                 Object userProfile = user.get("profile");
@@ -143,13 +142,17 @@ public class ServiceUtilisateur {
 
                 //System.out.print(profile);
                 Result result = Result.fromContent(user);
+                
+                float id = Float.parseFloat(result.getAsString("id"));
+                System.out.println(id);
                 SessionManager.setId((int) id);
                 //SessionManager.setEvaluation((int) evaluation);
                 float profileId= Float.parseFloat(result.getAsString("profile/id"));
                 SessionManager.setProfileId((int) profileId);
                 SessionManager.setEmail(user.get("email").toString());
                 SessionManager.setPassowrd(user.get("password").toString());
-                SessionManager.setRole(user.get("roles").toString());
+                System.out.println("ROLES : " + result.getAsString("roles"));
+                SessionManager.setRole(result.getAsString("roles"));
                 SessionManager.setNom(user.get("nom").toString());
                 SessionManager.setPrenom(user.get("prenom").toString());
                 SessionManager.setLangue(user.get("langue").toString());
@@ -171,11 +174,13 @@ public class ServiceUtilisateur {
     /*ArrayList<Profile> getCurrentProfile() {
         
     }*/
-    public void editUser(int id, int profileId, TextField nom, TextField prenom, TextField email, TextField evaluation, TextField description, TextField image, TextField password, ComboBox role, ComboBox langue) {
+    public void editUser(int id, int profileId, TextField nom, TextField prenom, TextField email, TextField evaluation, TextField description, TextField image, TextField password, String role, ComboBox langue) {
 
-        String url = Statics.BASE_URL + "/user/editUserMobile?id=" + id + "&profileId=" + profileId + "&nom=" + nom.getText().toString() + "&prenom=" + prenom.getText().toString() + "&image=" + image.getText().toString() + "&description=" + description.getText().toString() + "&email=" + email.getText().toString() + "&evaluation=" + evaluation.getText() + "&password=" + password.getText().toString() + "&roles=" + role.getSelectedItem().toString() + "&langue=" + langue.getSelectedItem().toString();
+        String url = Statics.BASE_URL + "/user/editUserMobile?id=" + id + "&profileId=" + profileId + "&nom=" + nom.getText().toString() + "&prenom=" + prenom.getText().toString() + "&image=" + image.getText().toString() + "&description=" + description.getText().toString() + "&email=" + email.getText().toString() + "&evaluation=" + evaluation.getText() + "&password=" + password.getText().toString() + "&roles=" + role + "&langue=" + langue.getSelectedItem().toString();
         // String url = Statics.BASE_URL + "/user/editUserMobile?id=" + id + "&nom=" + nom + "&prenom=" + prenom + "&password=" + password + "&email=" + email+ "&roles=" + role+ "&langue=" + langue;
         req.setUrl(url);
+                 //req.setPost(false);
+
         req.addResponseListener((e) -> {
 
             String str = new String(req.getResponseData());

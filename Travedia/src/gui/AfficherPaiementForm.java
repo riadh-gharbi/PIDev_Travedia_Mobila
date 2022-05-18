@@ -32,13 +32,13 @@ public class AfficherPaiementForm extends BaseForm {
     public AfficherPaiementForm(Form previous, int payID)
     {
         current = this;
-        Paiement p = Stream.of(PaiementService.getInstance().getAllPaiement()).filter(l->l.getId()==payID).findFirst().orElse(null);
+        Paiement p = Stream.of(PaiementService.getInstance().getAllPaiement()).filter(l->(int)l.getId()==payID).findFirst().orElse(null);
         setLayout(BoxLayout.y());
         setTitle("Paiement "+ p.getId());
         Label lbClientID = new Label();
-        lbClientID.setText("ClientID: " + p.getClientId());
+        lbClientID.setText("Client: " + p.getClientName());
         Label lbOwnerID = new Label();
-        lbOwnerID.setText("OwnerID: " + p.getOwnerId());
+        lbOwnerID.setText("Owner: " + p.getOwnerName());
         Label lbDateCreation = new Label();
         lbDateCreation.setText("Date de Creation: "+ p.getDate_creation() );
         Label lbDatePaiement = new Label();

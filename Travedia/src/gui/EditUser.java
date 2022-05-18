@@ -22,6 +22,8 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.util.Resources;
 import com.Travedia.myapp.ServiceUtilisateur;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import java.util.Vector;
 
 /**
@@ -55,7 +57,7 @@ public class EditUser extends BaseForm {
         TextField image = new TextField(SessionManager.getImage(), "Image ...");
         TextField evaluation = new TextField(evalString, "Evaluation ...");
         TextField description = new TextField(SessionManager.getDescription(), "Description ...");
-        TextField password = new TextField("", "Password...");
+        TextField password = new TextField(SessionManager.getPassowrd(), "Password...");
 
         //Role
         Vector<String> vectorRole;
@@ -98,13 +100,18 @@ public class EditUser extends BaseForm {
         FontImage.setMaterialIcon(lastNameIcon, FontImage.MATERIAL_PERSON, 3);
         FontImage.setMaterialIcon(emailIcon, FontImage.MATERIAL_PERSON_OUTLINE, 3);
         FontImage.setMaterialIcon(passwordIcon, FontImage.MATERIAL_LOCK_OUTLINE, 3);
-
+        JsonArray array = new JsonArray();
+        array.add("ROLE_GUIDE");
+        JsonArray arrayV = new JsonArray();
+        arrayV.add("ROLE_VOYAGEUR");
         Button confirmer = new Button("Confirmer");
+        
         confirmer.setUIID("LoginButton");
         confirmer.addActionListener((l) -> {
             //nom.getText().toString(), prenom.getText().toString(), email.getText().toString(), password.getText().toString(), roles.getSelectedItem().toString(), langue.getSelectedItem().toString()
             //userService.getInstance().editUser(SessionManager.getId(), firstName.getText().toString(), lastName.getText().toString(), password.getText().toString());
-            ServiceUtilisateur.getInstance().editUser(SessionManager.getId(), SessionManager.getProfileId(), nom, prenom, email, evaluation, description, image, password, roles, langue);
+            
+            ServiceUtilisateur.getInstance().editUser(SessionManager.getId(), SessionManager.getProfileId(), nom, prenom, email, evaluation, description, image, password, "Guide".equals(roles.getSelectedItem())?array.toString():arrayV.toString(), langue);
             // ServiceUtilisateur.getInstance().editUser(TOP, nom, prenom, password, email, roles, langue);
 
             Dialog.show("Success", "Welcome", "OK", null);

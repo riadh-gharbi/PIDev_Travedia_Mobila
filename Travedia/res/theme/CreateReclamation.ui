@@ -6,7 +6,7 @@
     </component>
     <component type="TextArea" name="TextArea" cloudBoundProperty="text" cloudDestinationProperty="TextArea" text="TextArea" >
     </component>
-    <component type="Button" name="Button" cloudDestinationProperty="Button" text="Button" verticalAlignment="2" >
+    <component type="Button" name="Button" cloudDestinationProperty="Button" text="BUTTON" verticalAlignment="2" >
     </component>
   </component>
 </component>

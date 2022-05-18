@@ -45,7 +45,7 @@ public class ListeHotel extends BaseForm {
         {
             MultiButton mb = new MultiButton("Hotel "+h.getNom()+ "Tel "+ h.getNumTel());
             mb.setTextLine2(h.getEmail()+" ");
-            //mb.addActionListener(e -> new AfficherPaiementForm(current,p.getId()).show());
+            mb.addActionListener(e -> new afficheHot(current,h.getId()).show());
             listHotel.add(mb);
         }
         add(listHotel);

@@ -46,7 +46,7 @@ public class ListePlanning extends BaseForm{
         {
             MultiButton mb = new MultiButton("date_depart"+h.getDateDepart()+"date_fin"+h.getDateFin()+"prix"+h.getPrix()+"type_plan"+h.getTypePlan()+"description"+h.getDescription()+"utilisateur"+h.getVoyageurId()+"evenements"+h.getEvenementId()+"destinations"+h.getDestinationId()+"hotels"+h.getHotelId());
             mb.setTextLine2(h.getVoyageurId()+" ");
-            //mb.addActionListener(e -> new AfficherPaiementForm(current,p.getId()).show());
+            mb.addActionListener(e -> new afficherPla(current,h.getId()).show());
             listPlanning.add(mb);
         }
         add(listPlanning);

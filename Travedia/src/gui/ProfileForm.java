@@ -51,16 +51,16 @@ public class ProfileForm extends BaseForm {
     public ProfileForm(Resources res) {
         //super("Newsfeed", BoxLayout.y());
         setLayout(BoxLayout.y());
-        Toolbar tb = new Toolbar(true);
-        setToolbar(tb);
+//        Toolbar tb = new Toolbar(true);
+//        setToolbar(tb);
         getTitleArea().setUIID("Container");
         setTitle("Profile");
         getContentPane().setScrollVisible(false);
 
         super.addSideMenu(res);
 
-        tb.addSearchCommand(e -> {
-        });
+//        tb.addSearchCommand(e -> {
+//        });
 
         Image img = res.getImage("profile-background.jpg");
         if (img.getHeight() > Display.getInstance().getDisplayHeight() / 3) {

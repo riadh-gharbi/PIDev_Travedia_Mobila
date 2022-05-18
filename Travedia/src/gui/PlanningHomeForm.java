@@ -23,7 +23,7 @@ public class PlanningHomeForm extends BaseForm {
         
         add(new Label("Choose an option"));
         Button btnAjouterPlan = new Button("Ajouter Planning");
-        Button btnListPlan = new Button("Liste des reclamations");
+        Button btnListPlan = new Button("Liste des Plannings");
         
     
         

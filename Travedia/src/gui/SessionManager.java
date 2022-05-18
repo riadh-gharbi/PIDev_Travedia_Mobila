@@ -53,11 +53,11 @@ public class SessionManager {
     
     
      public static int getProfileId() {
-        return pref.get("id", profileId);
+        return pref.get("profileId", profileId);
     }
 
     public static void setProfileId(int profileId) {
-        pref.set("id", profileId);//nsajl id user connecté  w na3tiha identifiant "id";
+        pref.set("profileId", profileId);//nsajl id user connecté  w na3tiha identifiant "id";
     }
     
 
@@ -130,6 +130,7 @@ public static String getRoles() {
     }
 
     public static void setDescription(String description) {
+        if (description == null) SessionManager.description = "Pas de description";else
         SessionManager.description = description;
     }
 

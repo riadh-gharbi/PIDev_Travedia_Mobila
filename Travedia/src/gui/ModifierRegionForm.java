@@ -47,10 +47,10 @@ public class ModifierRegionForm extends BaseForm {
            super("Newsfeed",BoxLayout.y());
    
         //*******
-        Toolbar tb = new Toolbar (true);
+        //Toolbar tb = new Toolbar (true);
         current = this ;
-        setToolbar(tb);
-        getTitleArea().setUIID("Container");
+        //setToolbar(tb);
+        //getTitleArea().setUIID("Container");
         setTitle("Modiifier region");
         getContentPane().setScrollVisible(false);
                 Tabs swipe = new Tabs();

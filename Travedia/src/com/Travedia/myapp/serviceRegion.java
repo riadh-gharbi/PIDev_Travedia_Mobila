@@ -21,6 +21,7 @@ import com.codename1.io.MultipartRequest;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
 import com.codename1.ui.events.ActionListener;
+import com.mycompany.services.utils.Statics;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -223,7 +224,7 @@ public class serviceRegion {
     
     public boolean modifierRegion(Region reg)
      {
-        String url ="/modifierregionn?id="+reg.getId()+"&nom="+reg.getNom();
+        String url ="http://127.0.0.1:8000" +"/modifierregionn?id="+reg.getId()+"&nom="+reg.getNom();
         con.setUrl(url);
         con.addResponseListener(new ActionListener<NetworkEvent>() {
              @Override
@@ -237,7 +238,7 @@ public class serviceRegion {
      }
     
     public boolean  SupprimerRegion(int id){
-       String url = "http://127.0.0.1:8000" + "/deleteRegionns?id=" +id;
+       String url = "http://127.0.0.1:8000" + "/deleteRegions?id=" +id;
 
         con.setUrl(url);
         con.setPost(false);

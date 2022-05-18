@@ -18,7 +18,7 @@ public class HotelHomeForm extends BaseForm {
     Form current;
     public HotelHomeForm() {
         current=this; //Back 
-        setTitle("Reclamation");
+        setTitle("Hotels");
         setLayout(BoxLayout.y());
         
         add(new Label("Choose an option"));

@@ -3,82 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/newpackage/ModifierEvenementForm.java</file>
             <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/Login.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListeReclamationForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/ReclamationReponse.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/Reclamation.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/modfierPlanning.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListCategorieForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/Travedia.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/newpackage/AjoutCategorie.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ModifierCategorieForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/PlanningHomeForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/PlanningService.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/Profile.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/HotelHomeForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/FrontDestination.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/modfierHotel.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/serviceRegion.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/mycompany/services/utils/Statics.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AjouterPaiementFormFull.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/MapForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/serviceProfile.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/Hotel.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AfficheDestination.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/afficherPla.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/PaiementHomeForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/SessionManager.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/Region.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/Planning.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AfficherRecForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/BaseForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ModifierPaiementForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/ServiceUtilisateur.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/newpackage/ListEvenementForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AddDestination.java</file>
             <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ModifierDestinationForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ModifierReclamationForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AjoutRegion.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/serviceDestination.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/EvenementServices.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/Evenement.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListRegionForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AjoutCategorie.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/Utilisateur.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/NewsfeedForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListePlanning.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListePaiementForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AjouterPaiementForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AfficherPaiementForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/HomeForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/EditUser.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AjoutEvenement.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AddHotelForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/HotelService.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ProfileHome.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AddPlanningForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ModifierEvenementForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/newpackage/ModifierCategorieForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListDestinationForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/Categorie.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListeHotel.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/MapForm.java</file>
             <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AjouterReclamationForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/newpackage/AjoutEvenement.java</file>
             <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AjouterDestinationForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/newpackage/ListCategorieForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ReclamationHomeForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/PaiementService.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/CategorieServices.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/Destination.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/afficheHot.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListRegionForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ModifierCategorieForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListePaiementForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AfficherPaiementForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/AjoutEvenement.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ProfileHome.java</file>
             <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/com/Travedia/myapp/ReclamationService.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/BaseForm.java</file>
             <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ProfileForm.java</file>
             <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ModifierRegionForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/SignUpForm.java</file>
-            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ActivateForm.java</file>
             <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/entities/Paiement.java</file>
             <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListEvenementForm.java</file>
+            <file>file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/src/gui/ListDestinationForm.java</file>
+            <file>jar:file:/C:/Users/riadh/Documents/GitHub/PIDev_Travedia_Mobile/Travedia/lib/CodenameOne_SRC.zip!/com/codename1/ui/Dialog.java</file>
         </group>
     </open-files>
 </project-private>

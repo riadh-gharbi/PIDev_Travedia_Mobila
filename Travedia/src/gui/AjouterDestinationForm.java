@@ -217,7 +217,7 @@ public class AjouterDestinationForm extends BaseForm {
                     ).toString(),
                    
                     String.valueOf(description.getText()).toString()  ,
-                         String.valueOf(image.getText()).toString(),
+                         filePath,
                      //   serviceRegion.getInstance().affichregionid(regionBox.getSelectedItem()).get(0).getId()
                        String.valueOf(regionBox.getSelected().uniqueId)
                         

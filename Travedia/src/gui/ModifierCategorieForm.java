@@ -28,8 +28,8 @@ public class ModifierCategorieForm extends BaseForm {
         
         Toolbar tb = new Toolbar (true);
         current = this ;
-        setToolbar(tb);
-        getTitleArea().setUIID("Container");
+        //setToolbar(tb);
+        //getTitleArea().setUIID("Container");
         setTitle("Modifier Categorie");
         getContentPane().setScrollVisible(false);
         

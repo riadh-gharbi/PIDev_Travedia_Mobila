@@ -146,7 +146,7 @@ public class ReclamationService {
          //String url = "http://127.0.0.1:8000" + "/ajouterReclamation";
          
          con.setUrl(url); //Insert url in connection request
-        // con.setPost(false);
+         con.setPost(false);
          con.setFailSilently(true);
          //con.addArgument("contenu", r.getContenu());
          //con.addArgument("utilisateur", r.getUser_id()+"");

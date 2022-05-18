@@ -50,7 +50,7 @@ public class ListCategorieForm extends BaseForm {
     
     //super("Newsfeed",BoxLayout.y());
         setLayout(BoxLayout.y());
-        Toolbar tb = new Toolbar (true);
+        //Toolbar tb = new Toolbar (true);
         current = this ;
         //setToolbar(tb);
         //getTitleArea().setUIID("Container");
